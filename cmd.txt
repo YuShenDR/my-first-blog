@@ -1,2 +1,53 @@
 启动服务器：
 python manage.py runserver 
+
+Django:
+1.导入模板类
+from blog.models import Post
+2.查询QuerySet集合
+Post.objects.all()
+3.导入用户类
+from django.contrib.auth.models import User
+4.查看所有用户
+User.objects.all()
+5.获得特定用户
+me = User.objects.get(username='ola')
+6.使用类
+Post.objects.create(类的属性）
+
+7.筛选
+Post.objects.filter(类的属性__contains=*)
+8.排序
+Post.objects.order_by('created_date')
+Post.objects.order_by('-created_date')（反向排）
+9.链式操作
+ Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+
+10.语句和参数
+{% for post in posts %}
+     {{ post|linebreaksbr }}
+{% endfor %}
+ |linebreaksbr 通过一个过滤器，使得行间隔编程段落
+
+
+git:
+1.当前文件状态：
+git status
+2.确认全部修改
+git add --all .
+3.提交修改
+git commit -m "Changed the HTML for the site."
+4.上传git
+git push
+
+服务器：
+1.打开项目文件地址
+cd ~/my-first-blog
+2.切换虚拟环境
+source myvenv/bin/activate
+3.上传git
+git pull
+4.更新集合
+python manage.py collectstatic
+5.重启服务器
+WEB-RELOAD
