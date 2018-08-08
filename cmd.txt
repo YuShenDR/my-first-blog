@@ -28,6 +28,8 @@ Post.objects.order_by('-created_date')（反向排）
      {{ post|linebreaksbr }}
 {% endfor %}
  |linebreaksbr 通过一个过滤器，使得行间隔编程段落
+11.这表示Django会把所有你放到这里的东西转变成一个称作 pk 的变量并传递给视图
+?P<变量>
 
 
 CSS和HTML:
