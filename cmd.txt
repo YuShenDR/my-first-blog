@@ -1,0 +1,2 @@
+Æô¶¯·şÎñÆ÷£º
+python manage.py runserver 
