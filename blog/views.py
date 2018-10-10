@@ -12,6 +12,9 @@ def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
 
+def helps(request):
+    return render(request, 'blog/help.html')
+
 def post_new(request):
     if request.method == "POST":
         form = PostForm(request.POST)
